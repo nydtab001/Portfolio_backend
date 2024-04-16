@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfoliobackend-8lrwnqd8.b4a.run', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['node180a.containers.back4app.com','portfoliobackend-8lrwnqd8.b4a.run', 'localhost', '127.0.0.1']
 
 
 # Application definition
