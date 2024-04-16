@@ -26,6 +26,7 @@ def submit_form(request):
         # email form processing
         subject = f"PORTFOLIO CONTACT {first_name} {last_name}"
         sender_email = EMAIL_HOST_USER
+        print(EMAIL_HOST_USER)
         recipient_email = 'tnyadza@gmail.com'
 
         # Send email
@@ -34,7 +35,7 @@ def submit_form(request):
             body=request.POST["message"] + '\n\n' + 'email:\n' + request.POST["email"],
             to=[recipient_email],
         )
-        print("message created")
+        print(f"message created {message}")
         try:
             backend.send_messages([message])
             print("message sent")
