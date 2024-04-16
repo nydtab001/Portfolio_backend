@@ -34,8 +34,10 @@ def submit_form(request):
             body=request.POST["message"] + '\n\n' + 'email:\n' + request.POST["email"],
             to=[recipient_email],
         )
+        print("message created")
         try:
             backend.send_messages([message])
+            print("message sent")
             return JsonResponse({'success': True, 'formsubmitted': True, 'message': 'Form submitted successfully'})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
