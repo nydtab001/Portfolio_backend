@@ -18,7 +18,9 @@ def get_csrf_token(request):
 
 @csrf_exempt
 def submit_form(request):
+    print("reached")
     if request.method == "POST":
+        print(request.POST)
         first_name = request.POST["first-name"]
         last_name = request.POST["last-name"]
         # email form processing
