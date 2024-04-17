@@ -37,6 +37,7 @@ def submit_form(request):
         )
         print(f"message created {message}")
         try:
+            print("sending message...")
             backend.send_messages([message])
             print("message sent")
             return JsonResponse({'success': True, 'formsubmitted': True, 'message': 'Form submitted successfully'})
