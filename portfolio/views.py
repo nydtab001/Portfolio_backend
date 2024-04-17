@@ -19,6 +19,7 @@ def get_csrf_token(request):
 @csrf_exempt
 def submit_form(request):
     print("reached")
+    print(backend)
     if request.method == "POST":
         print(request.POST)
         first_name = request.POST["first-name"]
