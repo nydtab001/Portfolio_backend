@@ -61,6 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://ewzqxp-5000.csb.app/",  # Example: Allow requests from frontend running on localhost
     "https://portfolio-frontend-eta-lake.vercel.app",  # Add more origins as needed
+    "https://tabokanyadza.vercel.app"
 ]
 
 CSRF_COOKIE_NAME = 'csrftoken'
